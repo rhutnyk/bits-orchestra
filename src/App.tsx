@@ -1,9 +1,27 @@
 import * as React from 'react';
 import './App.css';
+// import { Testimonial } from './ContentTypes/Testimonial';
+import * as Client from './Client';
 
 import logo from './logo.svg';
 
-class App extends React.Component {
+class App extends React.Component<any, any> {
+
+  constructor(props: React.ReactPropTypes) {
+    super(props);
+    this.state = {
+      testimonials: []
+    };
+  }
+
+  public componentDidMount() {
+    Client.default.items()
+      .equalsFilter('system.type', 'testimonial')
+      .get()
+      // .subscribe((response) => {
+      //   console.log(response)});
+  }
+
   public render() {
     return (
       <div className="App">
