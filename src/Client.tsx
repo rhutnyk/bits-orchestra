@@ -14,7 +14,7 @@ function isPreview() {
     return previewApiKey !== "";
 }
 
-export default new DeliveryClient(
+export let Client = new DeliveryClient(
     new DeliveryClientConfig(projectId, typeResolvers,
         {
             enablePreviewMode: isPreview(),

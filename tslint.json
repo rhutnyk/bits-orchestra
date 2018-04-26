@@ -16,17 +16,11 @@
       "parameter",
       "property-declaration"
     ],
+    "member-access": false,
     "no-any": false,
     "no-debugger": false,
-    "no-console": [
-      false,
-      "log",
-      "error",
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ]
+    "no-console": false,
+    "ordered-imports": false,
+    "max-classes-per-file": false
   }
 }

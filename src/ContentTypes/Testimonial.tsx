@@ -1,9 +1,9 @@
-import {  ContentItem } from 'kentico-cloud-delivery-typescript-sdk';
+import { ContentItem, Fields } from 'kentico-cloud-delivery-typescript-sdk';
 
 export class Testimonial extends ContentItem {
-    public name: string;
-    public title: string;
-    public email: string;
-    public company: string;
-    public feedback: string;
+    name: Fields.TextField;
+    title: Fields.TextField;
+    email: Fields.TextField;
+    company: Fields.TextField;
+    feedback: Fields.TextField;
 }

@@ -1,26 +1,10 @@
 import * as React from 'react';
 import './App.css';
-// import { Testimonial } from './ContentTypes/Testimonial';
-import * as Client from './Client';
+import { Testimonials } from './Views/Testimonials/Testimonial.List';
 
 import logo from './logo.svg';
 
-class App extends React.Component<any, any> {
-
-  constructor(props: React.ReactPropTypes) {
-    super(props);
-    this.state = {
-      testimonials: []
-    };
-  }
-
-  public componentDidMount() {
-    Client.default.items()
-      .equalsFilter('system.type', 'testimonial')
-      .get()
-      // .subscribe((response) => {
-      //   console.log(response)});
-  }
+class App extends React.Component {
 
   public render() {
     return (
@@ -29,9 +13,7 @@ class App extends React.Component<any, any> {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Testimonials/>
       </div>
     );
   }
