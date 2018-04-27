@@ -1,0 +1,25 @@
+.test-ul{
+    padding: 0;
+    list-style:none;
+}
+
+.test-ul>li{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.075);
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 47px -15px #000000;
+}
+.test-ul>li:hover h2{
+    transition: .7s;
+    border-bottom: 1px solid rgb(42, 245, 245);
+}
+
+.test-ul>li>h2{
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid transparent;
+    color: rgb(73, 179, 179);;
+  }
