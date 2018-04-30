@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Testimonial } from '../../ContentTypes/Testimonial';
 import { Client } from '../../Client';
 import { TestimonialListItem } from './Testimonial.ListItem';
+import './Testimonial.css';
 
 export class Testimonials extends React.Component<any, any> {
 
@@ -31,7 +32,7 @@ export class Testimonials extends React.Component<any, any> {
 
     public render() {
         return (
-            <ul>
+            <ul className="test-ul">
                 {this.testimonialListItems()}
             </ul>
         );
