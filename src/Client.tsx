@@ -3,7 +3,7 @@ import { DeliveryClient, DeliveryClientConfig, TypeResolver } from 'kentico-clou
 import { Testimonial } from './ContentTypes/Testimonial';
 
 const projectId = '6dea43b2-30ae-4f99-8da8-c29d0caa3870';
-const previewApiKey = "";
+const previewApiKey = "sfg";
 
 // configure type resolvers
 const typeResolvers = [
@@ -11,7 +11,7 @@ const typeResolvers = [
 ];
 
 function isPreview() {
-    return previewApiKey !== "";
+    return previewApiKey.length > 0;
 }
 
 export let Client = new DeliveryClient(
