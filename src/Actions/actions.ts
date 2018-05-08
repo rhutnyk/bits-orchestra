@@ -19,3 +19,20 @@ export const changeFirstName = (newName: any) => {
       type: 'GET_TESTIMONIALS',
     }
   }
+
+  export const addTestimonial = (data: any) => {
+    return {
+      payload: data,
+      type: 'ADD_TESTIMONIALS',
+    }
+  }
+
+  export const getData = (data: any) => {
+    return {
+      payload: data,
+      type: 'GET_DATA',
+    }
+  }
+  
+
+  

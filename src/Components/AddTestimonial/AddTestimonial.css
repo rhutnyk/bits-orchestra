@@ -1,0 +1,20 @@
+.add-testimonial>input{
+    padding: 5px;
+    margin: 10px 5px;
+    background-color: aqua;
+    border: none;
+  }
+
+  .add-testimonial>button{
+    padding: 5px;
+    margin: 10px 5px;
+    background-color: rgb(118, 120, 233);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 0 ;
+  }
+  .add-testimonial>button:hover{
+    background-color: rgb(77, 80, 231);
+  }

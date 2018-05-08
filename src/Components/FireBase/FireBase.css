@@ -1,0 +1,63 @@
+.form{
+    padding: 20px;
+}
+.form>input, button{
+    margin: 0 5px;
+    padding: 5px;
+}
+.form>button:hover{
+    cursor: pointer;
+    background-color: aqua;
+    outline: 0 ;
+    /* border-color: transparent; */
+}
+
+.data-page{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.item{
+    text-align: center;
+}
+
+
+.p-item>button{
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: -2px;
+    border-radius: 108px;
+    padding: 0px 5px;
+    padding-bottom: 2px;
+    border: 1px solid rgb(223, 223, 223);
+    outline: 0;
+    background-color: transparent;
+}
+.p-item>button:hover{
+    background-color: rgb(236, 236, 236);
+    color: black !important;
+}
+
+.p-item{
+    position: relative;
+    border: 6px solid transparent;
+    padding: 30px;
+    margin: 10px;
+    color: rgb(22, 22, 22);
+    float: left;
+    cursor: pointer;
+    box-shadow: 0px 0px 32px -8px #000000;
+}
+.p-item:hover{
+    transition: .3s;
+    border: 6px solid rgb(255, 33, 106);
+    background-color: rgba(0, 0, 0, 0.73);
+    color: white;
+}
+
+.p-item:hover button{
+    color: white;
+}
+
+
