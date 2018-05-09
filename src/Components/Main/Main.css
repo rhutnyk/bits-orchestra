@@ -7,15 +7,40 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.77);
     box-shadow: 0px 31px 38px -32px rgb(0, 0, 0);
-    height: 100px;
+    height: 120px;
     padding: 20px;
     color: white;
     position: fixed;
   }
   
- 
+  .App-header>button{
+    padding: 5px 15px;
+    cursor: pointer;
+    position: absolute;
+    border-color: #ff216a;
+    color: white;
+    font-size: 12px;
+    top: 10px;
+    right: 60px;
+  }
+  .App-header>button:hover{
+    border-color: #ff216a;
+  }
+  
+  .App-header>button>i{
+    color: #ff216a;
+    padding-left: 5px;
+  }
+
+  .userMail{
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    font-size: 14px;
+    color: #ff216a;
+  }
   
   .content{
-    padding-top: 160px;
+    padding-top: 140px;
   }
  

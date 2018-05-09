@@ -8,6 +8,7 @@ import './FireBase.css';
 
 
 class FireBase extends React.Component<any> {
+
   public componentWillMount() {
     const { getDataProp } = this.props;
     const ref = firebase.database().ref();
@@ -18,8 +19,7 @@ class FireBase extends React.Component<any> {
 
   public addToFireBase = () => {
     if (this.props.firstName && this.props.lastName) {
-      // const id = this.props.data.length;
-       firebase.database().ref('users').push(
+      firebase.database().ref('users').push(
         {
           firstname: this.props.firstName,
           lastname: this.props.lastName,
@@ -38,38 +38,40 @@ class FireBase extends React.Component<any> {
       const ref = firebase.database().ref('users');
       ref.child(id).remove();
     }
-}
+  }
 
   render() {
     const { firstName, lastName, data, changeFirstNameProp, changeLastNameProp } = this.props;
-  let a: any = [];
-  if (data && data.users) {
-    a = Object.keys(data.users);
-  }    
+    let a: any = [];
+    if (data && data.users) {
+      a = Object.keys(data.users);
+    }
     return (
       <div className="data-page">
-        <div className="form">
+        <div className="form-group">
           <input type="text" placeholder="First name"
+          className="form-control"
             value={firstName}
             onChange={(event) => { changeFirstNameProp(event.target.value) }}
           />
           <input type="text" placeholder="Last name"
+          className="form-control"
             value={lastName}
             onChange={(event) => { changeLastNameProp(event.target.value) }}
           />
-          <button onClick={this.addToFireBase}>Add to base</button>
+          <button className="btn btn-primary" onClick={this.addToFireBase}>Add to base</button>
         </div>
-        
+
         <div className="item">
           {
             a.map((key: any, index: number) =>
-            <span key={index}>
-            <p className="p-item"  >{`${data.users[key].firstname} ${data.users[key].lastname}`}
-              <br />
-              <button className="delete-item" onClick={() => this.deleteItem(key)}>x</button>
-            </p>
-            </span>
-          )}
+              <span key={index}>
+                <p className="p-item"  >{`${data.users[key].firstname} ${data.users[key].lastname}`}
+                  <br />
+                  <button className="delete-item" onClick={() => this.deleteItem(key)}>x</button>
+                </p>
+              </span>
+            )}
         </div>
       </div>
     )
