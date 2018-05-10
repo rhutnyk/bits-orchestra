@@ -6,27 +6,36 @@ import IMG from '../../img/b-o.png';
 
 class Login extends React.Component<any> {
 
+    errMessage: string = '';
     userMail: string = '';
     userPass: string = '';
 
     changeMail(e: any) {
         this.userMail = e;
+        this.forceUpdate();
     }
 
     changePass(e: any) {
         this.userPass = e;
+        this.forceUpdate();
     }
 
     Login = (e?: any) => {
         e.preventDefault();
         firebase.auth().signInWithEmailAndPassword(this.userMail, this.userPass)
-            .catch(err => console.log('err', err.message))
+            .catch(err => {
+                this.errMessage = err.message ? err.message : err;
+                this.forceUpdate();
+            });
     }
 
     Registration = (e?: any) => {
         e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(this.userMail, this.userPass)
-            .catch(err => console.log('err', err.message))
+            .catch(err => {
+                this.errMessage = err.message ? err.message : err;
+                this.forceUpdate();
+            });
     }
 
     render() {
@@ -38,6 +47,9 @@ class Login extends React.Component<any> {
                     <form>
                         <div className="form-group">
                             <label >Email address</label>
+                            {
+                                this.errMessage ?
+                                    <label className="err-message" >{this.errMessage}</label> : ''}
                             <input id="email" className="form-control" onChange={(event) => this.changeMail(event.target.value)} type="text" placeholder="Email" required={true} />
                         </div>
                         <div className="form-group">

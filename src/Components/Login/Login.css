@@ -34,3 +34,8 @@ img{
     float: left;
     color: white;
 }
+.err-message{
+    float: right !important;
+    color: #ffb78b !important;
+    font-size: 13px;
+}

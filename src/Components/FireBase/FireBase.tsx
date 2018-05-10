@@ -4,7 +4,9 @@ import * as firebase from 'firebase';
 import { getData, changeFirstName, changeLastName } from "../../Actions/actions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Confirm } from '../../Services/Notification/Notification';
 import './FireBase.css';
+
 
 
 class FireBase extends React.Component<any> {
@@ -33,11 +35,14 @@ class FireBase extends React.Component<any> {
   }
 
   public deleteItem = (id: any) => {
-    const a = confirm('Delete this item ?')
-    if (a) {
-      const ref = firebase.database().ref('users');
-      ref.child(id).remove();
-    }
+    Confirm('Delete this item ?')
+      .then((res: any) => {
+        if (res) {
+          const ref = firebase.database().ref('users');
+          ref.child(id).remove();
+        }
+      }
+      )
   }
 
   render() {
@@ -48,14 +53,15 @@ class FireBase extends React.Component<any> {
     }
     return (
       <div className="data-page">
+
         <div className="form-group">
           <input type="text" placeholder="First name"
-          className="form-control"
+            className="form-control"
             value={firstName}
             onChange={(event) => { changeFirstNameProp(event.target.value) }}
           />
           <input type="text" placeholder="Last name"
-          className="form-control"
+            className="form-control"
             value={lastName}
             onChange={(event) => { changeLastNameProp(event.target.value) }}
           />
@@ -63,15 +69,43 @@ class FireBase extends React.Component<any> {
         </div>
 
         <div className="item">
-          {
-            a.map((key: any, index: number) =>
-              <span key={index}>
-                <p className="p-item"  >{`${data.users[key].firstname} ${data.users[key].lastname}`}
+          
+              <table className="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Full</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+             {
+              a.map((key: any, index: number) =>
+                <tr key={index}>
+                  <th scope="row">{index+1}</th>
+                  <td>{data.users[key].firstname}</td>
+                  <td>{data.users[key].lastname}</td>
+                  <td>{`${data.users[key].firstname} ${data.users[key].lastname}`}</td>
+                  <td className="td-table-last"> <button className="delete-item" onClick={() => this.deleteItem(key)}>x</button></td>
+                </tr>
+              )}
+              
+              </tbody>
+            </table>
+          { 
+             a.map((key: any, index: number) =>
+               <span key={index}>
+                 <p className="p-item"  >{`${data.users[key].firstname} ${data.users[key].lastname}`}
                   <br />
-                  <button className="delete-item" onClick={() => this.deleteItem(key)}>x</button>
-                </p>
-              </span>
-            )}
+                   <button className="delete-item" onClick={() => this.deleteItem(key)}>x</button>
+               </p>
+               </span>
+            
+             )}
+         
+         
         </div>
       </div>
     )
