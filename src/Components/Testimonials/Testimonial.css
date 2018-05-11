@@ -12,12 +12,8 @@
   margin-bottom: 10px;
   box-shadow: 0px 0px 47px -15px #000000;
 }
-.test-ul>li:hover h2{
-    transition: .7s;
-    border-bottom: 1px solid rgb(42, 245, 245);
-}
 
-.test-ul>li>h2{
+.test-ul>li>h4{
     width: 50%;
     margin: 0 auto;
     border-bottom: 1px solid transparent;
