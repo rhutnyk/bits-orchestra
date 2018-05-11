@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Testimonial } from '../../ContentTypes/Testimonial';
-import { Client } from '../../Client';
+import { Client } from '../../Services/Kentico-cloud/Client';
 import { TestimonialListItem } from './Testimonial.ListItem';
 import './Testimonial.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getTestiomonial, getData } from '../../Actions/actions';
+import { getTestiomonial } from '../../Actions/actions';
 import { store } from '../../index';
 
 
@@ -46,14 +46,12 @@ class Testimonials extends React.Component<any, any> {
 
 const putStateToProps = (state: any) => {
     return {
-        data: state.data,
         testimonials: state.testemonials,
     }
 }
 
 const putActionsToProps = (dispatch: any) => {
     return {
-        getDataProp: bindActionCreators(getData, dispatch),
         getTestomonials: bindActionCreators(getTestiomonial, dispatch),
     }
 }
