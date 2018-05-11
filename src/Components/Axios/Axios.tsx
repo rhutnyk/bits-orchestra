@@ -31,6 +31,7 @@ class Axios extends React.Component {
       <div className='row'>
         <div className="container">
         <div className="list">
+        <p className="rotatable">Bits Orchestra </p>
         <i className="fab fa-github bg-git"/>
           { 
             this.urls.map((el:any, index:number) => 

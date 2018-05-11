@@ -70,7 +70,7 @@ class FireBase extends React.Component<any> {
 
         <div className="item">
           
-              <table className="table table-hover table-dark">
+              <table className="table table-hover ">
               <thead>
                 <tr>
                   <th scope="col">#</th>

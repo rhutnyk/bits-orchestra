@@ -37,7 +37,7 @@ class Menu extends React.Component<any> {
                             <li><NavLink activeClassName='is-active' to="/addTestimonial">Add testimonials</NavLink></li>
                             <li><NavLink activeClassName='is-active' to="/data">Fire base</NavLink></li>
                             <li><NavLink activeClassName='is-active' to="/axios">Axios data</NavLink></li>
-                            <li><NavLink activeClassName='is-active' to="/c">Contact</NavLink></li>
+                            <li><NavLink activeClassName='is-active' to="/gallery">Gallery</NavLink></li>
                         </ul>
                         :
                         ''

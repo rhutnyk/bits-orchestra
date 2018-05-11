@@ -32,3 +32,17 @@
     color: grey;
     z-index: -1;
 }
+
+.rotatable{
+    position: absolute;
+    left: 33px;
+    top: 281px;
+    font-size: 100px;
+    z-index: -1;
+    color: #80808014;
+    -webkit-transform: rotate(-45deg); 
+    -moz-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    transform: rotate(-40deg); 
+    }

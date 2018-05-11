@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export function GET_DATA(urls: any): Promise<any> {
+export const GET_DATA = (urls: any): Promise<any> => {
     const promiseArray: any = [];
     urls.forEach((el: any) => {
         promiseArray.push(axios.get(`https://${el}`))
