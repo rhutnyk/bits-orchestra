@@ -72,3 +72,34 @@
     transform: rotate(45deg);
     top:-8px;
 }
+
+
+@media screen and (max-width: 850px) {
+    .list-menu{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: -60px;
+        z-index: 1000;
+      
+    }
+
+    .list-menu > li {
+        display: block;
+        margin: 0px auto;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.83);
+        border-radius: 10px;
+        border: 1px solid #6f6d6d;
+        /* float: left; */
+    }
+    .list-menu > li:hover{
+        border-bottom: 1px solid #6f6d6d;
+       
+    }
+    .list-menu > li:hover a{
+        color: rgb(255, 244, 110);
+    }
+}

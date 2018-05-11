@@ -30,4 +30,5 @@
     right: 178px;
     opacity: 0.1;
     color: grey;
+    z-index: -1;
 }
