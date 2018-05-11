@@ -67,7 +67,7 @@
 .delete-item{
     cursor: pointer;
     position: absolute;
- 
+    top: 12px;
     border-radius: 7px;
     padding: 0px 10px;
     padding-bottom: 2px;

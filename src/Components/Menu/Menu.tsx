@@ -19,21 +19,11 @@ class Menu extends React.Component<any> {
                 {
                 clickBtn? 
                 <ul className="list-menu">
-                    <li>
-                        <NavLink exact={true} activeClassName='is-active' to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName='is-active' to="/addTestimonial">Add testimonials</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName='is-active' to="/data">Fire base</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName='is-active' to="/b">News</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName='is-active' to="/c">Contact</NavLink>
-                    </li>
+                    <li><NavLink exact={true} activeClassName='is-active' to="/">Home</NavLink></li>
+                    <li><NavLink activeClassName='is-active' to="/addTestimonial">Add testimonials</NavLink></li>
+                    <li><NavLink activeClassName='is-active' to="/data">Fire base</NavLink></li>
+                    <li><NavLink activeClassName='is-active' to="/axios">Axios data</NavLink></li>
+                    <li><NavLink activeClassName='is-active' to="/c">Contact</NavLink></li>
                 </ul>
                 :
                 ''
