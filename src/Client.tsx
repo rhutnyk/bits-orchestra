@@ -11,7 +11,7 @@ const typeResolvers = [
 ];
 
 function isPreview() {
-    return previewApiKey !== "";
+    return previewApiKey.length > 0;
 }
 
 export let Client = new DeliveryClient(
