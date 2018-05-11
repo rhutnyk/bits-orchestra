@@ -15,7 +15,6 @@ import './Main.css';
 // }
 // firebase.initializeApp(config);
 
-
 class MainComponent extends React.Component {
 
   render() {
