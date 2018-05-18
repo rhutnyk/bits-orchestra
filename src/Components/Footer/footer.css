@@ -1,0 +1,43 @@
+footer{
+    padding: 20px 0;
+    float: left;
+    width: 100%;
+    height: 230px;
+    background-color: rgb(34, 34, 33);
+    color: white;
+    color: #777;
+    font-size: 14px;
+}
+
+footer .f-foto1{
+    float: left;
+    width: 100px;
+    height: 45px;
+}
+
+footer .f-foto2{
+    float: left;
+    width: 170px;
+    height: 45px;
+    padding-left: 15px;
+}
+
+.f-contact{
+    padding-top: 40px;
+    float: right;
+    text-align: right;
+}
+
+.f-contact>p{
+    margin: 2px;
+}
+
+.f-contact>p>i{
+    padding-right: 5px;
+}
+
+.f-copy-r{
+    padding-top: 20px;
+    width: 100%;
+    text-align: center ;
+}

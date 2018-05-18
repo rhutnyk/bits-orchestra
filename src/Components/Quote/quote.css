@@ -1,0 +1,87 @@
+
+
+.team{
+    background-size: cover; 
+    position: relative;
+    height: 700px;
+}
+
+.team>.header-section{
+    color: white;
+}
+
+.blur {
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(13px);
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+  }
+
+  .widget {
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  .text {
+    height: 170px;
+    width: 80%;
+    color: white;
+    
+  }
+  
+  .text h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 38px;
+  }
+
+  .text h1>i{
+      position: relative;
+      bottom: 15px;
+      font-size: 24px;
+      padding:  0 20px;
+      color: rgba(255, 255, 255, 0.596);
+  }
+  
+  .text p {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    margin-top: 0px;
+    font-family: 'Lato', serif;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 890px) {
+    .text h1{
+        font-size: 29px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .text{
+       height: 255px;
+    }
+  }

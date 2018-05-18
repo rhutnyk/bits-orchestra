@@ -1,6 +1,6 @@
 // kentico cloud
 import { DeliveryClient, DeliveryClientConfig, TypeResolver } from 'kentico-cloud-delivery-typescript-sdk';
-import { Testimonial } from './ContentTypes/Testimonial';
+import { Testimonial } from '../../ContentTypes/Testimonial';
 
 const projectId = '6dea43b2-30ae-4f99-8da8-c29d0caa3870';
 const previewApiKey = "";

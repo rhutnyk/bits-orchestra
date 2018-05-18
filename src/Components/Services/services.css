@@ -1,0 +1,19 @@
+.blur1,
+.blur2{
+    filter: blur(100px);
+    width: 25%;
+    height: 55%;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin-top: 80px;
+}
+.blur2{
+    float: right;
+    right: 0;
+}
+.blur1{
+    float: left;
+    left: 0;
+}

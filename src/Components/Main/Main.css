@@ -1,0 +1,52 @@
+.content{
+    width: 80%;
+    margin: 10px auto;
+}
+
+
+/* ---------------------------------------------- */
+#services{
+    margin-bottom: 100px;
+}
+
+
+.header-section{
+    text-align: center;
+    padding: 100px 0 ;
+}
+
+.title-section{
+    font-size: 2.8em;
+    line-height: 48px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: .1em;
+    margin-bottom: 13px;
+}
+
+.title-section-sub{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0;
+    margin-bottom: 88px;
+    position: relative;
+    text-decoration: none;
+    top: 15px;
+}
+
+.title-section-sub:after{
+    display: block;
+    height: 5px;
+    width: 50px;
+    content: '';
+    bottom: -26px;
+    position: absolute;
+    background-color: #99c250;
+    left: 50%;
+    margin-left: -25px;
+}
+

@@ -1,0 +1,50 @@
+.cms{
+    background-color: rgba(0, 0, 0, 0.849);
+    color: white;
+    width: 100%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 0px 55px -20px #000000;
+    padding-bottom: 100px;
+}
+
+.cms-item{
+    height:  180px;
+    text-align: center;
+    opacity: 0;
+}
+
+.cms-item:hover i{
+    transition: .5s;
+    background-color: #99c250;
+    color: white;
+}
+.cms-item i{
+    float: left;
+    font-size: 60px;
+    color: #99c250;
+    background-color: rgb(49, 47, 47);
+    border-radius: 120px;
+    width: 132px;
+    height: 132px;
+    padding-top: 35px;
+    border-width: 4px;
+}
+.showCms-txt{
+    transition: .9s;
+    left: 15px !important;
+   
+}
+.showCms-item{
+    opacity: 1;
+    transition: opacity .9s;
+}
+.cms-item-text{
+    position: relative;
+    left: 55px;
+    text-align: left;
+}
+
+.cms-item-text>h6{
+    font-size: 16px;
+}
