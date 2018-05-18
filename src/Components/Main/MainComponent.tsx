@@ -1,21 +1,26 @@
 
 import * as React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Testimonials from '../Testimonials/Testimonial.List';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './Main.css';
 
+import SliderMain from "../Sliders/SliderMain";
+import Header from "../Header/Header";
+import Cms from "../CMS/Cms";
+import Services from "../Services/Services";
+import About from "../About/About";
+import Quote from "../Quote/Quote";
+import Blogs from "../Blogs/Blogs";
+import Feedbacks from "../Feedbacks/Feedbacks";
+import Gallery from "../Gallery/Gallery";
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
-// const config = {
-//   apiKey: "AIzaSyBLipUJoYBFLHtUwV8QXVtGA1yGhJks2fE",
-//   authDomain: "bits-test-007007.firebaseapp.com",
-//   databaseURL: "https://bits-test-007007.firebaseio.com",
-//   messagingSenderId: "945585213034",
-//   projectId: "bits-test-007007",
-//   storageBucket: "",
-// }
-// firebase.initializeApp(config);
+
+
 
 class MainComponent extends React.Component {
+
 
   render() {
 
@@ -23,27 +28,41 @@ class MainComponent extends React.Component {
       <Router >
 
         <div className="App">
+          <Header />
 
-          <header >
-            header
-            </header>
-
-          <div className="content">
-
-            <Switch>
-              <Route exact={true} path="/"  />
-              {/* <Route path="/addTestimonial" component={AddTestimonial} /> */}
-
-              {/* <Route exact={true} path="/*" component={Testimonials} /> */}
-            </Switch>
-
+          <div id="home">
+            <SliderMain />
           </div>
 
-          <footer>
-            footer
-            </footer>
-        </div>
+          <div id="services" className="content">
+            <Services />
+          </div>
 
+          <div id="cms" >
+            <Cms />
+          </div>
+
+          <div id="about" >
+            <About />
+            <Quote />
+          </div>
+
+          <div id="blogs" className="content">
+            <Blogs />
+          </div>
+
+          <div id="feedbacks">
+            <Feedbacks />
+            <Gallery />
+          </div>
+
+          <div id="contact" className="content">
+            <Contact />
+          </div>
+
+          <Footer />
+
+        </div>
       </Router>
     )
   }
