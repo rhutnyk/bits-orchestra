@@ -2,7 +2,8 @@ import * as React from "react";
 import './feedbacks.css';
 import Slider from "react-slick";
 
-import bg from '../../img/moon.jpg';
+// import bg from '../../img/moon.jpg';
+import bg from '../../img/tree.jpg';
 
 
 class Feedbacks extends React.Component {

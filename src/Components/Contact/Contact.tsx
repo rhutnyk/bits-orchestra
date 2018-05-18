@@ -1,14 +1,18 @@
 import * as React from "react";
 import './contact.css';
 
+import bg from '../../img/social/globo2.png';
+
 
 class Contact extends React.Component {
 
 
     render() {
-
+        const style = {
+            background: `url(${bg})no-repeat center center fixed`
+        }
         return (
-            <div className="contact">
+            <div className="contact" style={style}>
                 <div className="header-section">
                     <span className="title-section">CONTACT US</span> <br />
                     <span className="title-section-sub">Submit your request or question</span>
@@ -17,7 +21,7 @@ class Contact extends React.Component {
                 <div className="container">
                     <div className="row ">
                         <div className="col-md-12">
-                            <div className="row ">
+                            <div className="row form-all">
                                 <div className="col-md-6 form">
                                     <label>NAME</label>
                                     <input type="text"  placeholder="Enter name"/>
