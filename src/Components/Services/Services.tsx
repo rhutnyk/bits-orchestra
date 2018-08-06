@@ -9,8 +9,8 @@ class Services extends React.Component {
 
         return (
             <div className="services">
-              <div className="blur1" />
-              <div className="blur2" />
+              {/* <div className="blur1" />
+              <div className="blur2" /> */}
               <div className="header-section">
                 <span className="title-section">Our services</span> <br />
                 <span className="title-section-sub">What we do</span>

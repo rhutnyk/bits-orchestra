@@ -28,26 +28,30 @@ class SliderMain extends React.Component {
         };
 
         return (
-            <Slider {...settings2}>
-                <div>
-                    <img src={foto1} />
-                </div>
-                <div>
-                    <img src={foto2} />
-                </div>
-                <div>
-                    <img src={foto3} />
-                </div>
-                <div>
-                    <img src={foto1} />
-                </div>
-                <div>
-                    <img src={foto2} />
-                </div>
-                <div>
-                    <img src={foto3} />
-                </div>
-            </Slider>
+          
+                <Slider  {...settings2}>
+                    <div className='slide-main-item'>
+                        <h3>With any device you prefer...</h3>
+                        <img src={foto1} />
+                    </div>
+                    <div className='slide-main-item'>
+                    <h3>whatever infrastructure you need...</h3>
+                        <img src={foto2} />
+                    </div>
+                    <div className='slide-main-item'>
+                    <h3>will help you to make the best choice...</h3>
+                        <img src={foto3} />
+                    </div>
+                    <div className='slide-main-item'>
+                    <h3>to ensure your business grows...</h3>
+                        <img src={foto1} />
+                    </div>
+                    <div className='slide-main-item'>
+                    <h3>because your success is our goal!</h3>
+                        <img src={foto2} />
+                    </div>
+                </Slider>
+           
         )
     }
 

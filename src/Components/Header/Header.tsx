@@ -6,9 +6,24 @@ import $ from 'jquery';
 class Header extends React.Component {
     moment: number;
     scrolling: boolean;
+    clickBtn: boolean = true;
 
     componentWillMount() {
         window.addEventListener('scroll', this.onScroll, false);
+        if (document.documentElement.clientWidth < 850) {
+            this.addClass();
+        }
+    }
+
+    // clickMenu = (): void => {
+    //     if (document.documentElement.clientWidth < 850) {
+    //         this.addClass();
+    //     }
+    // }
+
+    addClass(event?: any): any {
+        this.clickBtn = !this.clickBtn;
+        this.forceUpdate();
     }
 
     onScroll = () => {
@@ -39,7 +54,9 @@ class Header extends React.Component {
                 </div>
 
                 <div className="menu" >
-                    <ul>
+                {
+                this.clickBtn ?
+                    <ul  className="list-menu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#cms">CMS</a></li>
@@ -48,7 +65,19 @@ class Header extends React.Component {
                         <li><a href="#feedbacks">Feedbacks</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                :
+                ''
+                }
+                 </div>
+                  <div id="burger-container" className={this.clickBtn ? 'open' : ''} onClick={() => { this.addClass(event) }}>
+                    <div id="burger">
+                        <span> &nbsp;</span>
+                        <span> &nbsp;</span>
+                        <span> &nbsp;</span>
+                        <span> &nbsp;</span>
+                    </div>
                 </div>
+               
 
             </header>
         )

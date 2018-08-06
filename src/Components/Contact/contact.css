@@ -18,7 +18,7 @@
 }
 
 .form>textarea{
-    height: 114px;
+    height: 100px;
     margin-bottom: 14px;
     background-color: #0000008c;
     border: none;
@@ -39,9 +39,9 @@
     font-weight: bold;
 }
 
-.security-input{
+/* .security-input{
     width: 50% !important;
-}
+} */
 
 .submit-btn{
     float: right;
@@ -55,4 +55,9 @@
 .submit-btn:hover{
     background: black;
     color: #9ec559;
+}
+
+button:disabled{
+    pointer-events:none;
+    background-color: grey;
 }
