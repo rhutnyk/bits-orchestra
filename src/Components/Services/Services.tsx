@@ -2,7 +2,12 @@ import * as React from "react";
 import './services.css';
 import SliderItem from "../Sliders/SliderItem";
 
-class Services extends React.Component {
+interface IState {
+    blogPosts: any[],
+    blogDetails: any,
+}
+
+export default class Services extends React.Component<any, IState> {
   
 
     render() {
@@ -21,5 +26,3 @@ class Services extends React.Component {
     }
 }
 
-
-export default Services

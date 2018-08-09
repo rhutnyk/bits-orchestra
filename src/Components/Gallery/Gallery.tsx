@@ -51,45 +51,6 @@ class Gallery extends React.Component {
                     <a href="#" />
                 </figure>
 
-                <div className="container">
-                    <div className="row ">
-
-                        <div className="col-md-6">
-                            sdss
-                        </div>
-                        <div className="col-md-12">
-                            <div className="box-slider">
-                                <ul className="m">
-                                    <li className="m1 li" tabIndex={1}><img src="//unsplash.it/500/500?random=1" alt="" /></li>
-                                    <li className="m2 li" tabIndex={2}><img src="//unsplash.it/500/500?random=2" alt="" /></li>
-                                    <li className="m3 li" tabIndex={3}><img src="//unsplash.it/500/500?random=3" alt="" /></li>
-                                    <li className="m4 li" tabIndex={4}><img src="//unsplash.it/500/500?random=4" alt="" /></li>
-                                    <li className="m5 li" tabIndex={5}><img src="//unsplash.it/500/500?random=5" alt="" /></li>
-                                    <li className="m6 li" tabIndex={6}><img src="//unsplash.it/500/500?random=6" alt="" /></li>
-                                    <li className="cube-wrap">
-                                        <div className="cube">
-                                            <div className="front"><img src="//unsplash.it/500/500?random=1" alt="" /></div>
-                                            <div className="right"><img src="//unsplash.it/500/500?random=2" alt="" /></div>
-                                            <div className="top"><img src="//unsplash.it/500/500?random=3" alt="" /></div>
-                                            <div className="left"><img src="//unsplash.it/500/500?random=4" alt="" /></div>
-                                            <div className="bottom"><img src="//unsplash.it/500/500?random=5" alt="" /></div>
-                                            <div className="back"><img src="//unsplash.it/500/500?random=6" alt="" /></div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
             </div>
         )
     }

@@ -1,17 +1,38 @@
 import * as React from "react";
 import './cms.css';
+import DataService from "../../common/services/DataService";
 
-class Cms extends React.Component {
+interface IState {
+    dataCms: any[],
     showCms: boolean;
+}
 
-    onScroll = () => {
-        this.showCms = (window.scrollY > 1250);
-        this.forceUpdate();
+class Cms extends React.Component<any, IState> {
+
+    private dataSvc: DataService = new DataService('system.type=cms');
+
+    constructor(props: any) {
+        super(props)
+
+        this.state = {
+            dataCms: [],
+            showCms: false,
+        }
     }
 
     componentWillMount() {
         window.addEventListener('scroll', this.onScroll, false);
+        
+        this.dataSvc.query()
+        .then(res => {
+            this.setState({ dataCms: res.items });
+        })
     }
+    
+    onScroll = () => {
+        this.setState({ showCms: (window.scrollY > 1250) })
+    }
+
 
     render() {
 
@@ -25,69 +46,19 @@ class Cms extends React.Component {
 
                 <div className="container">
                     <div className="row cms-colom">
-
-                        <div className="col-md-6">
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-star" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Popular</h4>
-                                    <h6>Above 25,000 web sites</h6>
+                        {
+                            this.state.dataCms.map((element, i) =>
+                                <div key={i} className="col-md-6">
+                                    <div className={`cms-item ${this.state.showCms ? 'showCms-item' : ''}`}>
+                                        <i className={`${element.elements.icon_class.value}`} />
+                                        <div className={`cms-item-text ${this.state.showCms ? 'showCms-txt' : ''}`}>
+                                            <h4>{element.system.name}</h4>
+                                            <h6 dangerouslySetInnerHTML={{ __html: element.elements.description.value }} />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="far fa-building" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Well Known</h4>
-                                    <h6>McDonald’s, Brussels Airlines, Vodafone, Audi, Mazda, Subaru, Samsung, Gibson, ESPN, Guinness and others use Kentico CMS</h6>
-                                </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-sitemap" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Extendable</h4>
-                                    <h6>Web farm support</h6>
-                                </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-cogs" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Reliable</h4>
-                                    <h6>7 days issue fixing policy, 24/7 support</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-6">
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-globe" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>World Wide</h4>
-                                    <h6>Used in 100 countries</h6>
-                                </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-bullseye" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Solid Solution</h4>
-                                    <h6>70 modules, 450 configurable web parts will cover most of your needs</h6>
-                                </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-magic" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>Customizible</h4>
-                                    <h6>Source code availability along with different approaches for customization</h6>
-                                </div>
-                            </div>
-                            <div className={`cms-item ${this.showCms ? 'showCms-item' : ''}`}>
-                                <i className="fas fa-hands-helping" />
-                                <div className={`cms-item-text ${this.showCms ? 'showCms-txt' : ''}`}>
-                                    <h4>User Friendly</h4>
-                                    <h6>Easy-to-use and obvious editing interface in a administration as well as on site</h6>
-                                </div>
-                            </div>
-                        </div>
-
+                            )
+                        }
                     </div>
                 </div>
 

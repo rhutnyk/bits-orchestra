@@ -1,27 +1,30 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
+// import './Components/Main/Main.css'
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { rootReducer } from './Reducers/reducer';
+
+import Header from './Components/Header/Header';
 import MainComponent from './Components/Main/MainComponent';
+import BlogList from './Components/BlogDetails/Blog-list';
+import BlogDetails from './Components/BlogDetails/Blog-details';
+import Footer from './Components/Footer/Footer';
 
 
-// ---------------generation id ----------------------
- 
-// const CREATE_ID = () => {
-//   return '_' + Math.random().toString(36).substr(2, 10);
-// };
-
-
-export const store: any = createStore(rootReducer);
 
 ReactDOM.render(
-  <Provider store={store}>
-    <MainComponent />
-  </Provider>,
+  <Router >
+    <div className="App">
+    <Header />
+        <Route exact={true} path='/' component={MainComponent} />
+        <Route exact={true} path='/blogs' component={BlogList} />
+        <Route  path='/blogs/:id' component={BlogDetails} />
+        <Footer />
+        </div>
+  </Router >,
+
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

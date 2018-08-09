@@ -3,7 +3,7 @@ import './contact.css';
 
 import ReCAPTCHA from 'react-google-recaptcha';
 
-import bg from '../../img/social/globo2.png';
+import bg from '../../img/globo2.png';
 
 
 class Contact extends React.Component {

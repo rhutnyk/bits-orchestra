@@ -13,12 +13,6 @@ body::-webkit-scrollbar {
   width: .6em;
 }
 
-body::-webkit-scrollbar-track {
-  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.945);
-  background-color:transparent; */
-}
-
 body::-webkit-scrollbar-thumb {
 background-color: #99c250;
-/* outline: 10px solid rgb(252, 8, 150); */
 }

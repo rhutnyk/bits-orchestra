@@ -4,12 +4,31 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import DataService from "../../common/services/DataService";
 
-import foto1 from '../../img/slider/slide1.jpg';
-import foto2 from '../../img/slider/slide2.jpg';
-import foto3 from '../../img/slider/slide3.jpg';
 
-class SliderMain extends React.Component {
+interface IState {
+    mainSliders: any[],
+}
+
+class SliderMain extends React.Component<any, IState> {
+
+    private dataSvc: DataService = new DataService('system.type=heroslideritem');
+
+    constructor(props: any) {
+        super(props)
+
+        this.state = {
+            mainSliders: [],
+        }
+    }
+
+    componentDidMount() {
+        this.dataSvc.query()
+            .then(res => {
+                this.setState({ mainSliders: res.items });
+            })
+    }
 
 
     render() {
@@ -28,30 +47,18 @@ class SliderMain extends React.Component {
         };
 
         return (
-          
-                <Slider  {...settings2}>
-                    <div className='slide-main-item'>
-                        <h3>With any device you prefer...</h3>
-                        <img src={foto1} />
-                    </div>
-                    <div className='slide-main-item'>
-                    <h3>whatever infrastructure you need...</h3>
-                        <img src={foto2} />
-                    </div>
-                    <div className='slide-main-item'>
-                    <h3>will help you to make the best choice...</h3>
-                        <img src={foto3} />
-                    </div>
-                    <div className='slide-main-item'>
-                    <h3>to ensure your business grows...</h3>
-                        <img src={foto1} />
-                    </div>
-                    <div className='slide-main-item'>
-                    <h3>because your success is our goal!</h3>
-                        <img src={foto2} />
-                    </div>
-                </Slider>
-           
+
+            <Slider  {...settings2}>
+                {
+                    this.state.mainSliders.map((element, i) =>
+                        <div key={i} className='slide-main-item'>
+                            <h3>{element.elements.title.value}</h3>
+                            <img src={element.elements.image.value[0].url} />
+                        </div>
+                    )
+                }  
+            </Slider>
+
         )
     }
 

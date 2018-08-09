@@ -3,6 +3,19 @@
 }
 
 
+.with-navlink>a{
+    color: #a6dc45;
+    border-bottom: 1px solid #ececec;
+    padding: 0 10px;
+}
+
+.with-navlink>a:hover{
+  text-decoration: none;
+  color: #99c250;
+  border-color: #99c250;
+}
+
+
 .wrap{
     margin:0 auto ;
     width:100%;
@@ -32,7 +45,7 @@
      
   }
   
-  .tile{
+  .title{
     width:380px;
     height:290px;
     margin:10px;
@@ -49,8 +62,14 @@
     border-bottom-left-radius:  10px;
     border-bottom-right-radius:  10px;
   }
+
+  .bl-details>a{
+    background-color: #99c250;
+    padding: 5px 15px;
+    float: right;
+  }
   
-  .tile img{
+  .title img{
     height:200px;
     width:100%;
     position:absolute;
@@ -60,10 +79,10 @@
     transition: all 0.4s ease-out;
   }
   
-  .tile .text1{
+  .title .text1{
   /*   z-index:99; */
     position:absolute;
-    padding:15px;
+    padding: 7px;
     height:calc(100% - 60px);
   }
   
@@ -78,7 +97,7 @@
     font-weight: bold;
   }
   
-  .tile h1{
+  .title h1{
     color:#99c250;
     font-weight:300;
     text-align: center;
@@ -93,37 +112,42 @@
     text-shadow: 3px 3px 13px rgb(0, 0, 0);
   }
   
-  .tile p{
+  .title p{
     position: relative;
-    top: -80px;
-    font-weight:300;
-    line-height: 23px;
+    top: -70px;
+    line-height: 16px;
     transform: translateX(-200px);
     transition-delay: 0.2s;
   }
 
-  .animate-text{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.27058823529411763);
-    padding-bottom: 5px;;
+  .animate-text,
+  .animate-text>p{
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.27058823529411763); */
+    padding-bottom: 70px;
+    font-size: 14px;
     opacity:0;
     transition: all 0.6s ease-in-out;
   }
 
-  .tile:hover{
+  .title:hover{
   box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     transform:scale(1.05);
   }
-  .tile:hover img{
+  .title:hover img{
     opacity: 0.2;
   }
 
-  .tile:hover .animate-text{
+  .title:hover .animate-text{
     transform:translateX(0);
     opacity:1;
   }
   
+  .title:hover .animate-text>p{
+    transform:translateX(0);
+    opacity:1;
+  }
   
-  .tile:hover span{
+  .title:hover span{
     opacity:1;
     transform:translateY(0px);
   }

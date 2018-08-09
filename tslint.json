@@ -16,6 +16,7 @@
       "parameter",
       "property-declaration"
     ],
+    "member-ordering": false,
     "member-access": false,
     "no-any": false,
     "no-debugger": false,

@@ -3,8 +3,6 @@ import './footer.css';
 
 import kentico1 from '../../img/kentico1.png';
 import kentico2 from '../../img/kentico2.png';
-import brand from '../../img/b-o.png';
-
 
 
 class Footer extends React.Component {
@@ -51,7 +49,6 @@ class Footer extends React.Component {
 
                     </div>
                 </div>
-                <img className="f-brand" src={brand} alt="" />
             </footer>
         )
     }

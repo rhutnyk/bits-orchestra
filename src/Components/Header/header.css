@@ -38,12 +38,12 @@ header:hover{
 
 .logo{
     float: left;
-    margin-left: 100px;
+    margin-left: 15%;
 }
 
 .logo>img{
-    padding-top: 7px;
-    width: 320px;
+   height: 100px;
+   opacity: .7;
 }
 
 .menu{
