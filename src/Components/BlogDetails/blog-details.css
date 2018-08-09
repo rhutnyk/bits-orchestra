@@ -1,0 +1,96 @@
+.blog-page{
+    padding-top: 150px; 
+ }
+
+
+.blog-page a{
+    color: #99c250;
+}
+
+.blog-header{
+    color: #99c250;
+    font-size: 2.5em;
+    line-height: 48px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.blog-page .date {
+    color: #99c250;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.blog-page .date>span{
+    color: black;
+    text-transform:none;
+    font-size: 13px;
+}
+
+.blog-page .date a{
+    cursor: pointer;
+    text-transform:none;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.blog-page .date a:hover{
+    border-bottom: 1px solid #99c250;
+}
+
+.btn-back{
+    float: right;
+    margin: 10px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.btn-back:hover{
+    border: none;
+}
+
+
+
+/* -------------------blog-list----------------- */
+
+.item-blog{
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.item-blog>.icon{
+    width: 14%;
+    float: left;
+    margin-right: 1%;
+}
+.item-blog>.icon>img{
+    width: 100%;
+}
+
+
+.item-blog>.item-content{
+    width: 85%;
+    float: left;
+}
+
+.item-blog>.item-content>.time{
+    width: 100%;
+    float: left;
+}
+.item-blog>.item-content>.item-title{
+    width: 100%;
+    color: #99c250;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    float: left;
+    padding-bottom: 7px;
+}
+.item-blog>.item-content>.item-text{
+    width: 100%;
+    float: left;
+    font-size: 17px;
+}
